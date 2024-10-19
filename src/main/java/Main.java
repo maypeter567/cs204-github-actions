@@ -9,9 +9,8 @@ public class Main {
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        usage();
         while (scanner.hasNextLine()) {
-            System.out.println("Input: ");
-            System.out.flush();
             String input = scanner.nextLine();
             String[] arguments = input.split(" ");
             
