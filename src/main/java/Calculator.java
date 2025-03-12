@@ -37,9 +37,9 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n) {
-        if (n <= 0) {
+        if (n < 0) {
             throw new Error("Input must be a positive integer.");
-        } else if (n == 1) {
+        } else if (n == 1 || n == 0) {
             return 0;
         } else if (n == 2) {
             return 1;
