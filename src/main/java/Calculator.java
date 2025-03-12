@@ -36,10 +36,16 @@ class Calculator {
     .
     etc
      */
-    int fibonacciNumberFinder(int n){
-        return 0;
+    int fibonacciNumberFinder(int n) {
+        if (n <= 0) {
+            throw new Error("Input must be a positive integer.");
+        } else if (n == 1) {
+            return 0;
+        } else if (n == 2) {
+            return 1;
+        }
+        return fibonacciNumberFinder(n - 1) + fibonacciNumberFinder(n - 2);
     }
-
 
     /*
     Returns binary value of the given int number
@@ -49,7 +55,7 @@ class Calculator {
     if int a = 16 then this method returns: 10000
      */
     String intToBinaryNumber(int number){
-        return null;
+        return Integer.toBinaryString(number);
     }
 
     /*
@@ -61,8 +67,11 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
-        return null;
+        IDCounter++;
+        return n + IDCounter;
     }
+    
+    int IDCounter = 0;
 
 
 }
